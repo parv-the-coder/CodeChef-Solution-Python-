@@ -1,0 +1,10 @@
+T = int(input())
+
+for _ in range(T):
+    X, Y = input().split()
+    X = int(X)
+    Y = int(Y)
+
+    minimum_investment = X - Y
+
+    print(minimum_investment)
