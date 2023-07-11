@@ -1,0 +1,12 @@
+T = int(input())
+
+for _ in range(T):
+    X, Y = input().split()
+    X = int(X)
+    Y = int(Y)
+
+    hours = Y - X
+    if hours < 0:
+        hours += 12
+
+    print(hours)
