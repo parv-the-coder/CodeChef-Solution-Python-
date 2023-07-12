@@ -1,0 +1,31 @@
+def encode_message(N, S):
+    # Step 1: Swap adjacent characters
+    message = list(S)
+    for i in range(0, N-1, 2):
+        message[i], message[i+1] = message[i+1], message[i]
+
+    # Step 2: Replace characters
+    for i in range(N):
+        if message[i] == 'a':
+            message[i] = 'z'
+        else:
+            message[i] = chr(ord('a') + 25 - (ord(message[i]) - ord('a')))
+
+    encoded_message = ''.join(message)
+    return encoded_message
+
+
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read the length of the message and the message string
+    N = int(input())
+    S = input()
+
+    # Encode the message
+    encoded_message = encode_message(N, S)
+
+    # Print the encoded message
+    print(encoded_message)
