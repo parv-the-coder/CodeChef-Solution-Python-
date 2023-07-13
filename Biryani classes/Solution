@@ -1,0 +1,9 @@
+T = int(input())
+
+for _ in range(T):
+    # Read X and Y for the current test case
+    X, Y = map(int, input().split())
+
+    total_amount = X * Y
+
+    print(total_amount)
