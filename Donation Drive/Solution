@@ -1,0 +1,10 @@
+# Read the number of test cases
+t = int(input())
+
+# Process each test case
+for _ in range(t):
+    n, x = input().split()
+    n = int(n)
+    x = int(x)
+    remaining_donations = n - x
+    print(remaining_donations)
